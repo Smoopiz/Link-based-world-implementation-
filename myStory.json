@@ -1,58 +1,118 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "City Escape",
+    "Credits": "Created by Yuval Szwarcbord",
+    "InitialLocation": "City Enternce",
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
-            "Choices": [
-                {
-                    "Text": "South",
-                    "Target": "Porter"
-                }
-            ]
+      "City Enternce": {
+        "Body":"The world is nearing the end, the skies are glowing red, and all cities are locked down. There is one gate locking us inside and a dome above our heads. But is that the whole story? No, I refuse to let it be the whole story. I have to leave. I have to find it out for myself.", 
+        "Choices": [
+          { "Text": "Go to the Main Road", "Target": "Main Road" }
+        ]
+      },
+      "Main Road": {
+        "Body": "Everyone here is watching me, or… at least it feels that way. I don't like this, it feels like everyone wants me to fail, to agree with them all. But I can't. I'm different. The road is splitting, doesn't feel like both are right… but I can't stop and falter here.",
+        "Choices": [
+          { "Text": "Continue to T-Road", "Target": "T-Road" }
+        ]
+      },
+      "T-Road": {
+        "Body": "One way in, two ways out. People in both directions, it still feels like all eyes are on me, but I haven't done anything wrong yet… there shouldn't be a reason for them to be watching me. What do they know that I don't…? If I go to the left, I can disappear from their eyes, but if I go to the right, I'll be hidden in plain sight.",
+        "Choices": [
+          { "Text": "Go to the Left", "Target": "Enter Alleyway" },
+          { "Text": "Go to the Right", "Target": "Run into Store" }
+        ]
+      },
+  
+      "Enter Alleyway": {
+        "Body": "The shadows, I've always felt like I belong here. I like it, it's quiet, and no one stares at me for no reason. But I can't enjoy this feeling for too long, I have to continue moving. I'm sure they won't let me get away with this forever.",
+        "Choices": [
+          { "Text": "Continue", "Target": "Alleyway Continued" }
+        ]
+      },
+      "Alleyway Continued": {
+        "Body": "I know I shouldn't stare, but who on earth would sleep here? Who is naive enough to believe anything about him… oh… it's a guard. What kind of stupid guard goes to sleep here? He must know that we're all buzzing to steal whatever we can from his kind.",
+        "Choices": [
+          { "Text": "Approach the Sleeping Guard", "Target": "Sleeping Guard" }
+        ]
+      },
+      "Sleeping Guard": {
+        "Body": "You really are asleep, aren't you? You poor soul, I'm sure anyone else wouldn't mess with you… I'm sorry that you had to meet me in your sleep, this might cause you to lose your job, but you guards have done worse for the rest of us… So… I'm sorry, okay? I know you are just following orders. I hope that you don't get punished too much.",
+        "Choices": [
+          { "Text": "Pick-pocket the Guard", "Target": "Pick-pocket Guard" }
+        ]
+      },
+      "Pick-pocket Guard": {
+        "Body": "Please don't wake up, just stay asleep for a little longer. I don't want to have to do something bad to you. You're just trying to make a living like me, I don't want to hurt you… Just stay asleep for ten more minutes and make us both be able to go where we need to. ",
+        "Choices": [
+          { "Text": "Steal the key", "Target": "Grab the Key" }
+        ]
+      },
+      "Grab the Key": {
+        "Body": "Thank you, thank you for staying asleep. I hope they don't mess up your future too badly because of that. You should use a good lie, Mr. Sleeping Guardsman, make it believable.",
+        "Item": "GateKey",
+        "Choices": [
+          { "Text": "Sneak back through the alley", "Target": "Hidden Alleyway" }
+        ]
+      },
+      "Hidden Alleyway": {
+        "Body": "I should run now that one key got stolen. I'm sure they're on high alert looking for me… Well, someone like me, at least, they don't know who I am yet, at least I hope they don't.",
+        "Choices": [
+          { "Text": "Return to City Enternce", "Target": "City Enternce" }
+        ]
+      },
+  
+      "Run into Store": {
+        "Body": "Thank God, a quiet moment, but where should I leave from… That front door probably would be the fastest, but it doesn't look safe. But then there is the employee exit, I'm not supposed to be there… But since when has that stopped me?",
+        "Choices": [
+          { "Text": "Use the Main Door", "Target": "Police Ambush" },
+          { "Text": "use the Employee Exit", "Target": "Employee Exit" }
+        ]
+      },
+      "Police Ambush": {
+        "Body": "No, NO! Don't do this to me! Don't stop me here, please don't do that to me! Just let me leave! I won't come back. No, please don't force me to do it all again!",
+        "Choices": [
+          { "Text": "Don't forget", "Target": "Starting Over" }
+        ]
+      },
+      "Starting Over": {
+        "Body": "What? Where am I? What happened? I know I need to do something, but what was it? Well… maybe if I keep walking in this direction, I'll remember it.",
+        "Choices":[{"Text": "Remember your path", "Target": "City Enternce"}]
+      },
+      "Employee Exit": {
+        "Body": "I'm sure of it, the other door was a trap. This is the only way for me out of here. I'm sorry I scared you workers, you deserve better than this… Better than having some crazy guy run through your store and use the exit that should keep you all safe.",
+        "Choices": [
+          { "Text": "Back onto Main Road", "Target": "Run to the Main Gate" }
+        ]
+      },
+      "Run to the Main Gate": {
+        "Body": "I can see it! Finally I can see it! The gate, that goddamn giant gate! I am so close to being out of here, but I shouldn't be so happy yet… Until I'm out of here, anything can happen.",
+        "Choices": [
+          { "Text": "Carfully continue walking", "Target": "The Main Gate" }
+        ]
+      },
+      "The Main Gate": {
+          "Body": "One last trial, one last thing holding me back! I can finally get out of here and start my new life… or my fast death… But either way, they'll remember me as the man who did something with his life, a man who tried to seek the truth… or as the greatest fool of us all.",
+          "Choices": [
+          {
+            "Text": "Approach the gate",
+            "Target": "Unlock the Gate"
+          }
+        ]
+      },
+      "Unlock the Gate": {
+        "Scene": "GateLogic", 
+        "Body": "Please work… Please tell me you work… Please! I need this, I need one good thing to come from this… I just need one small ounce of good luck… God, I hope it works…",
+          "Choices": [
+           {
+              "Text": "You put the key into the doors lock",
+              "Target": "Freedom"
+           }
+          ]      
         },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Kresge"
-                },
-                {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
-                }
-            ]
-        },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Porter"
-                },
-                {
-                    "Text": "South",
-                    "Target": "Oakes"
-                }
-            ]
-        },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
-                },
-                {
-                    "Text": "South",
-                    "Target": "Beyond"
-                }
-            ]
-        },
-        "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
-        }
+      "Freedom": {
+        "Body": "It worked! But… I can't celebrate yet, I have to run like a madman! I can't stop running, not now, not ever. I'm wanted for this, wanted for life. They'll track me down wherever I go. I can't enjoy life anymore, but this is what I wanted. I wanted freedom.",
+        "Choices": []
+      }
     }
-}
+  }
+  
